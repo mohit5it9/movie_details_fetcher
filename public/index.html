@@ -55,10 +55,10 @@
 				<label>http://www.imdb.com/title/tt</label><input type="text" ng-model="movieFetcher.movieId" ></input>
 				<button ng-click="movieFetcher.sendId(movieFetcher.movieId)">Fetch Details</button>
 			</div>
-			<ul ng-if="test" class="results">
-				<li><em>Movie Name</em>:&nbsp&nbsp<b>{{test.title}}</b></li>
-				<li ng-if="test.ratings"><em>Ratings</em>:&nbsp&nbsp<b>{{test.ratings}}</b></li>
-				<li ng-if="test.released"><em>Year Released</em>:&nbsp&nbsp<b>{{test.released}}</b></li>
+			<ul ng-if="response" class="results">
+				<li><em>Movie Name</em>:&nbsp&nbsp<b>{{response.title}}</b></li>
+				<li ng-if="response.ratings"><em>Ratings</em>:&nbsp&nbsp<b>{{response.ratings}}</b></li>
+				<li ng-if="response.released"><em>Year Released</em>:&nbsp&nbsp<b>{{response.released}}</b></li>
 			</ul>
 		</div>
 	</body>

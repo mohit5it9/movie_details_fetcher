@@ -7,7 +7,7 @@ angular.module('IMDBApp', [])
 		$http({method: 'POST',url: '/test',headers:{'Content-Type': 'text/plain'},data: id})
 			.success(function(response){
 				console.log("response is ",response);
-				$scope.test =  response;
+				$scope.response =  response;
 			});
 	};
 }]);
