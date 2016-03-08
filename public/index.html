@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="IMDBApp">
+	<head>
+		<style>
+			.container{
+				width:80%;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			.sub_heading{
+				width:80%;
+				margin-left:auto;
+				margin-right: auto;
+				text-align: center;
+				font-family: Arial;
+				color:#737373;
+				margin-bottom: 20px;
+				border: 1px #ff944d solid;
+			}
+			.input_form{
+				width: 80%;
+				margin-top: 10px;
+				margin-left: auto;
+				margin-right: auto;
+				padding-left: 150px;
+			}
+			label{
+				font-size: 18px;
+				color:#1a1a1a;
+			}
+			input{
+				width:10%;
+				border: 1px #1a1a1a dashed;
+			}
+			ul{
+				width:80%;
+				margin-left: auto;
+				margin-right: auto;
+				font-size: 20px;
+			}
+			li{
+				margin-bottom: 10px;
+			}
+		</style>
+		<title>IMDB Movie Details Fetcher</title>
+		<script src="angular.min.js"></script>
+		<script src="controller.js"></script>
+	</head>
+	<body>
+		<div ng-controller="IMDBController as movieFetcher" class="container">
+			<div class="sub_heading">
+				<h2>Enter IMDB ID of Movie:</h2>
+			</div>
+			<div class="input_form">
+				<label>http://www.imdb.com/title/tt</label><input type="text" ng-model="movieFetcher.movieId" ></input>
+				<button ng-click="movieFetcher.sendId(movieFetcher.movieId)">Fetch Details</button>
+			</div>
+			<ul ng-if="test" class="results">
+				<li><em>Movie Name</em>:&nbsp&nbsp<b>{{test.title}}</b></li>
+				<li ng-if="test.ratings"><em>Ratings</em>:&nbsp&nbsp<b>{{test.ratings}}</b></li>
+				<li ng-if="test.released"><em>Year Released</em>:&nbsp&nbsp<b>{{test.released}}</b></li>
+			</ul>
+		</div>
+	</body>
+</html>
