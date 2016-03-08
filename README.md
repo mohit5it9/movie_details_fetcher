@@ -5,8 +5,8 @@ Upon entering the IMDB ID of the movie in the browser it fetches the Movie Detai
 <h2>Tools Used:</h2>
 <ul>
 <li>
-<b>Angular</b>
+<b>AngularJS</b>
 </li>
 <li>
-<b>Node</b>
+<b>NodeJs</b>
 </li>
